@@ -9,7 +9,6 @@ import com.company.SomOperations.EasyOperations;
 import com.company.WorkingWithText.Demonstrate;
 import com.company.WorkingWithText.FileReader;
 
-import static java.lang.System.in;
 import static java.lang.System.out;
 
 
@@ -19,14 +18,13 @@ public class Main {
     private static final String delimiterForPrograms = "----------------------------------------------------------------------------------------";
     private static final String delimiterForProjects = "=========================================================================================";
 
-
     public static void main(String[] args) throws IOException {
         out.println(delimiterForProjects);
         out.println("Easy stream");
 
         out.println("We have the list of double numbers: ");
         List<Double> listOfDouble = new ArrayList<>(Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0));
-        listOfDouble.forEach(out::println);
+        listOfDouble.forEach(out::print);
 
         out.println("Added 1 to each number and casted to the Integer: ");
         EasyOperations.plusOne(listOfDouble).forEach(out::println);
@@ -116,7 +114,7 @@ public class Main {
         out.println(delimiterForPrograms);
         out.println();
 
-        List<Integer> listOfNumbers = new ArrayList<>(Arrays.asList(1,15,16,14,29,45,67,90));
+        List<Integer> listOfNumbers = new ArrayList<>(Arrays.asList(1, 15, 16, 14, 29, 45, 67, 90));
         out.print("We have the list of numbers: " + listOfNumbers);
         out.println();
         out.print("Filter and print it: ");
